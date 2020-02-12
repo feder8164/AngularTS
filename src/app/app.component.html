@@ -1,6 +1,7 @@
 Witam cię {{title}}
 <ul>
-  <li *ngFor="let day of days">
+  <li *ngFor="let day of days; let i = index">
+    {{i}}
         {{day}}
   </li>
 </ul>
