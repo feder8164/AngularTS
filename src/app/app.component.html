@@ -1,3 +1,10 @@
-Witam cię {{title}} <!-- anguldar poszukuje w komponencie -->
-Robak wygrywa z {{dog?.name}}
-{{dog?.age}}
+Witam cię {{title}}
+<ul>
+  <li *ngFor="let day of days">
+        {{day}}
+  </li>
+</ul>
+
+<li *ngFor="let dog of dogs">
+  {{dog.name}}
+</li>

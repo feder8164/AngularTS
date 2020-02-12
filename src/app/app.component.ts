@@ -6,9 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  title: string = `robaku`
+  title: string = `robaku`;
 
-  dog: Dog; //obiekt typu dog
+  days: string[] = ['Pon', 'Wto', 'Sr'];
+
+  dogs = new Array<Dog>(); // lista nowych obiektow
+
+  constructor(){
+    this.dogs.push(new Dog('Reksio',4), new Dog('Latek',3),
+    new Dog('Lolek', 5));
+  }
+
 }
 
 class Dog {
