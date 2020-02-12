@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   title: string = `robaku`
 
-  dog = new Dog(`adas`,3);
+  dog = new Dog(`adas`,3333);
 
   
 

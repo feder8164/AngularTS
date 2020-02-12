@@ -1,5 +1,5 @@
-Witam cię {{title}} <!-- angular poszukuje w komponencie -->
+Witam cię {{title | titlecase}} <!-- angular poszukuje w komponencie -->
 Robak wygrywa z {{dog.name}}
-{{dog.age}}
+{{dog.age | number: '1.1-2'}}
 {{dog.showDog}}
 {{showDog()}}
