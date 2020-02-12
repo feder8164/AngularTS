@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  title: string = `robaku`
+
+  dog = new Dog(`adas`,3);
+
+  
+
+  showDog(){
+    return this.dog.name
+  };
+}
+
+class Dog {
+  constructor(public name: string, public age: number){ 
+    //musi być public żeby pole było widoczne
+    }
+       showDog(){
+         return this.name
+       }
 }
