@@ -13,7 +13,7 @@ Witam cię {{title}}
   {{remove}}
 </div>
 
-<div *ngIf="dogs.length > 0; then areDogs; else noDogs"></div> //lub
+<div *ngIf="dogs.length > 0; then areDogs; else noDogs"></div> 
 
 <div *ngIf = "dogs.length > 0; else noDogs">
 <ng-container *ngFor="let dog of dogs">
@@ -27,3 +27,10 @@ Witam cię {{title}}
 
 <button (click)="addDogs()">Dodaj </button>
 <button (click)="removeDogs()">Usun </button>
+
+<div *ngFor="let day of days">
+  <div [ngSwitch] = "day" >
+    <div *ngSwitchCase = " 'Pon' ">Montag</div>
+    <div *ngSwitchCase = " 'Wto' ">Montagggg</div>
+  </div>
+</div>
