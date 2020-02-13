@@ -34,3 +34,13 @@ Witam cię {{title}}
     <div *ngSwitchCase = " 'Wto' ">Montagggg</div>
   </div>
 </div>
+<br>
+<ng-container *ngIf="isVisable">
+XD
+</ng-container>
+<button (click)="show()">ngIf</button>
+<br>
+<ng-container *ngIf="isHidden">
+  XD2
+</ng-container>
+<button (click) = "hidden()">Hidden</button>

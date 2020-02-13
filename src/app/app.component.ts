@@ -17,6 +17,17 @@ export class AppComponent  {
     new Dog('Lolek', 5));
   }
 
+  isVisable = true;
+  isHidden = false;
+
+  show(){
+    this.isVisable = !this.isVisable
+  }
+
+  hidden(){
+    this.isHidden = !this.isHidden
+  }
+
 
 
 }
