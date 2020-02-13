@@ -1,11 +1,17 @@
 Witam cię {{title}}
+<div *ngIf = "days.length > 2">
 <ul>
-  <li *ngFor="let day of days; let i = index">
-    {{i}}
-        {{day}}
+  <p *ngFor="let day of days; let e = even">
+  <li *ngIf="e" >
+    {{day}}
   </li>
+  </p>
 </ul>
-
-<li *ngFor="let dog of dogs">
+</div>
+<ul>
+<ng-container *ngFor="let dog of dogs">
+  <li *ngIf="dog.name == 'REKSIO' ">
   {{dog.name}}
-</li>
+  </li>
+</ng-container >
+</ul>

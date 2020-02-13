@@ -13,7 +13,7 @@ export class AppComponent  {
   dogs = new Array<Dog>(); // lista nowych obiektow
 
   constructor(){
-    this.dogs.push(new Dog('Reksio',4), new Dog('Latek',3),
+    this.dogs.push(new Dog('REKSIO',4), new Dog('Latek',3),
     new Dog('Lolek', 5));
   }
 
