@@ -8,10 +8,22 @@ Witam cię {{title}}
   </p>
 </ul>
 </div>
-<ul>
+
+<div>
+  {{remove}}
+</div>
+
+<div *ngIf="dogs.length > 0; then areDogs; else noDogs"></div> //lub
+
+<div *ngIf = "dogs.length > 0; else noDogs">
 <ng-container *ngFor="let dog of dogs">
-  <li *ngIf="dog.name == 'REKSIO' ">
-  {{dog.name}}
-  </li>
+  <p>{{dog.name}} </p>
 </ng-container >
-</ul>
+</div>
+
+<ng-template #noDogs>
+  <p> Nic </p>
+</ng-template>
+
+<button (click)="addDogs()">Dodaj </button>
+<button (click)="removeDogs()">Usun </button>
