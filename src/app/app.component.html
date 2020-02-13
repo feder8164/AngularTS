@@ -1,12 +1,6 @@
 <h3 [className]=" colorClass "> Siema robak </h3>
-<button [disabled]="isDisable" (click) = "change()">XD</button>
-<button (click) = "change1()">XD1</button>
-<button (click) = "hidden()">Hidden</button>
+
+<p>Daniel to {{profession}}, i {{skill}}</p>
+<input [(ngModel)] = "profession">
 <br>
-
-<img *ngIf = "isHidden" class="img" [src] = "logoUrl">
-
-<input [maxLength] = 5 value="xd">
-<input (mousemove) = "onMouseMove($event)">
-<input (focus) = "onFocus()">
-<input (click)="onClick($event)">
+<input [(ngModel)] = "skill">
