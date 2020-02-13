@@ -40,4 +40,15 @@ export class AppComponent  {
   hidden(){
     this.isHidden = false;
   }
+
+  onMouseMove(event){
+    console.log('x: ' + event.clientX + ', y: ' + event.clientY);
+  }
+  onFocus(){
+    this.colorClass = 'color2'
+  }
+
+  onClick(event){
+    console.log(event)
+  }
 }
