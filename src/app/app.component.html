@@ -1,4 +1,8 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h3 [className]=" colorClass "> Siema robak </h3>
+<button [disabled]="isDisable" (click) = "change()">XD</button>
+<button (click) = "change1()">XD1</button>
+<button (click) = "hidden()">Hidden</button>
+<br>
+<img *ngIf = "isHidden" class="img" [src] = "logoUrl">
+
+<input [maxLength] = 5 value="xd">
