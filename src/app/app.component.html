@@ -1,6 +1,7 @@
-<app-child>
-  <h1>XD</h1>
-  {{x + 3}}
-  <app-child2>
-  </app-child2>
-</app-child>
+<div *ngIf = "show">
+  <app-child [inputText] = "title" [inputDog] = "dog"></app-child> <!-- Przesyła do child -->
+</div>
+<button (click) = "changeTitle()">Zmień tytuł</button>
+<button (click) = "changeDog()">Zmien psa</button>
+<button (click) = "nothing()">Nic nie rób</button>
+<button (click) = "destory()">Usun komponent</button>
