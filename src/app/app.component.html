@@ -1,4 +1,6 @@
-<input #inputText> <!--Lokalna referencja do pola tekstowego | w komponencie jest niewidoczna -->
-<button (click) = "add(inputText)">Dodaj</button> <!-- Przesłanie do metody add -->
-
-<app-child #childRef [tasks] = "tasksList" (eventTask) = "selected($event)" ></app-child> 
+<app-child>
+  <h1>XD</h1>
+  {{x + 3}}
+  <app-child2>
+  </app-child2>
+</app-child>

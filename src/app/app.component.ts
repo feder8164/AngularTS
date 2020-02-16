@@ -1,5 +1,4 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { ChildComponent } from './child/child.component';
 
 @Component({
   selector: 'my-app',
@@ -7,22 +6,7 @@ import { ChildComponent } from './child/child.component';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+
+  x:number = 5;
   
-  tasksList = ['sprzatanie', 'gotowanie'];
-
-  @ViewChild('childRef')
-  ChildComponent: ChildComponent; // cała klasa export z child
-
-  @ViewChild('inputText')
-  input: ElementRef;
-
-  selected(task): void{
-    console.log(task);
-  }
-
-  add(input: HTMLInputElement){
-    this.tasksList.push(input.value);
-    this.ChildComponent.tasks = [];
-    this.input.nativeElement.value  = ''; // mozna ustawaic parametry html tutaj
-  }
 }
