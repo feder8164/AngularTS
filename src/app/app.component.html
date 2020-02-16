@@ -1,1 +1,4 @@
-<app-child [tasks] = "tasksList" (eventTask) = "selected($event)" ></app-child> <!-- Przesyłam selected($event) do app component  -->
+<input #inputText> <!--Lokalna referencja do pola tekstowego | w komponencie jest niewidoczna -->
+<button (click) = "add(inputText)">Dodaj</button> <!-- Przesłanie do metody add -->
+
+<app-child #childRef [tasks] = "tasksList" (eventTask) = "selected($event)" ></app-child> 

@@ -5,7 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
   templateUrl: "./child.component.html",
   styleUrls: ["./child.component.css"]
 })
-export class ChildComponent implements OnInit {
+export class ChildComponent implements OnInit { // nazawa dla referencji klasy w app-component
   
   @Input() 
   tasks; 
