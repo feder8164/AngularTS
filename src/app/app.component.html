@@ -1,4 +1,18 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<input  [(ngModel)] = "addTask">
+<button (click) = "pushTask()">Dodaj</button>
+
+<div *ngFor = "let task of taskList">
+  {{task.Work}}
+<button (click) = "removeTask(task)">Usun</button>
+<button (click) = "doneTask(task)">Zrobione</button>
+</div>
+
+<ng-container *ngIf = "taskListdone.length > 0">
+  Zadania zrobione : {{taskListdone.length}}
+<div *ngFor = "let task of taskListdone">
+  <p>
+      {{task.Work}}
+      <button (click) = "removeTaskdone(task)">Usun</button>
+  </p>
+</div>
+</ng-container>
