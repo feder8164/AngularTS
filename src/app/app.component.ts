@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   
   tasksList = ['sprzatanie', 'gotowanie'];
+  selected(task){
+    console.log(task);
+  }
 }

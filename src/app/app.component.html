@@ -1,1 +1,1 @@
-<app-child [tasks] = "tasksList"></app-child> <!-- przypisany taskList-->
+<app-child [tasks] = "tasksList" (eventTask) = "selected($event)" ></app-child> <!-- Przesyłam selected($event) do app component  -->
