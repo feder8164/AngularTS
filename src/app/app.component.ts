@@ -7,11 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   
-  addTask: string;
-  taskList = new Array<work>(); //tablica obiektow
+  
+  taskList = new Array<work>();
   taskListdone = new Array<work>();
-  pushTask(){
-    this.taskList.push(new work(this.addTask));
+  
+  selectedTask(task: string){
+    this.taskList.push(new work(task));
   }
   removeTask(task){ // przesyłam obiekt
     this.taskList = this.taskList.filter(e => e !== task)
@@ -21,7 +22,8 @@ export class AppComponent  {
   }
   doneTask = task => {
     this.taskListdone.push(task);
-    this.removeTask(task);
+    this.removeTask(task); // usuwa z poczekalni
+    
   }
   
 }

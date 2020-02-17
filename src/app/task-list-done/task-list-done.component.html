@@ -1,0 +1,9 @@
+<ng-container *ngIf = "taskListdone.length > 0">
+  Zadania zrobione : {{taskListdone.length}}
+<div *ngFor = "let task of taskListdone">
+  <p>
+      {{task.Work}}
+      <button (click) = "removeTaskdone(task)">Usun</button>
+  </p>
+</div>
+</ng-container>
