@@ -1,10 +1,11 @@
 <ng-container *ngIf="tasksList.length > 0; else noTask">
-  <p></p>
-	<div *ngFor="let task of tasksList">
+	<ul>
+    <li *ngFor="let task of tasksList">
 		{{task.Work}}
 		<button (click) = "removeTask(task)">Usun</button>
 		<button (click) = "doneTask(task)">Zrobione</button>
-	</div>
+    </li>
+	</ul>
 </ng-container>
 
 <ng-template #noTask>

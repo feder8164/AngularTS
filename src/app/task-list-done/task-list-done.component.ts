@@ -1,9 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-task-list-done',
   templateUrl: './task-list-done.component.html',
-  styleUrls: ['./task-list-done.component.css']
+  styleUrls: ['./task-list-done.component.css'],
+  //----------------//Styl ten bedzie teraz globalny
+  encapsulation: ViewEncapsulation.None 
 })
 export class TaskListDoneComponent implements OnInit {
 
