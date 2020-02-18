@@ -7,24 +7,23 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TaskListDoneComponent implements OnInit {
 
-  //--------------@Input-------------------//Odbieranie danych
 
   @Input()
   taskListdone = [];
 
-  //--------------@Output-------------------//Wysyłanie danych
+  
 
   @Output()
   eventRemoveTaskDone = new EventEmitter<string>();
 
 
-  //--------------Metody-------------------//
+ 
 
   removeTaskdone(task){
     console.log(task)
     this.eventRemoveTaskDone.emit(task);
   }
-  //--------------ngStyle-------------------//Dynamiczne style
+  
 
   getColor(): string{
     
@@ -33,10 +32,11 @@ export class TaskListDoneComponent implements OnInit {
   }
 
 
-
   constructor() { }
 
   ngOnInit() {
+    
+  
   }
 
 }

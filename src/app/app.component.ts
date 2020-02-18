@@ -18,15 +18,15 @@ export class AppComponent implements OnInit  {
   selectedTask(task: string){
     this.taskList.push(new work(task));
   }
-  removeTask(task){ // przesyłam obiekt
+  removeTask(task){ 
     this.taskList = this.taskList.filter(e => e !== task)
   }
-  removeTaskdone(task){ // przesyłam obiekt
+  removeTaskdone(task){
     this.taskListdone = this.taskListdone.filter(e => e !== task)
   }
   doneTask = task => {
     this.taskListdone.push(task);
-    this.removeTask(task); // usuwa z poczekalni
+    this.removeTask(task);
     
   }
   
