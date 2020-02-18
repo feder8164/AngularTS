@@ -11,7 +11,7 @@ import { ClickService } from './services/click.service';
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent, Klikacz1Component, Klikacz2Component ],
-  bootstrap:    [ AppComponent ],
-  providers: [ClickService]
+  bootstrap:    [ AppComponent ]
+  // providers: [ClickService] // dla całego modulu
 })
 export class AppModule { }

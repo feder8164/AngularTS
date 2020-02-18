@@ -15,6 +15,7 @@ export class Klikacz1Component implements OnInit {
 
   ngOnInit() {
   }
+  
 
   fclick1(){
     this.clik1++
