@@ -11,7 +11,7 @@ import { TaskService } from './services/task.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, AddComponent, TaskListComponent,TaskListDoneComponent ],
+  declarations: [ AppComponent, HelloComponent, AddComponent, TaskListComponent,TaskListDoneComponent],
   bootstrap:    [ AppComponent ],
   providers: [TaskService]
 })
