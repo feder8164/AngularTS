@@ -7,10 +7,12 @@ import { HelloComponent } from './hello.component';
 import { AddComponent } from './add/add.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskListDoneComponent } from './task-list-done/task-list-done.component';
+import { TaskService } from './services/task.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent, AddComponent, TaskListComponent,TaskListDoneComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [TaskService]
 })
 export class AppModule { }

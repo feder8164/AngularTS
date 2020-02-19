@@ -8,27 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   
   
-  taskList = new Array<work>();
-  taskListdone = new Array<work>();
   
-  selectedTask(task: string){
-    this.taskList.push(new work(task));
-  }
-  removeTask(task){ // przesyłam obiekt
-    this.taskList = this.taskList.filter(e => e !== task)
-  }
-  removeTaskdone(task){ // przesyłam obiekt
-    this.taskListdone = this.taskListdone.filter(e => e !== task)
-  }
-  doneTask = task => {
-    this.taskListdone.push(task);
-    this.removeTask(task); // usuwa z poczekalni
-    
-  }
-  
-}
-class work{
-  constructor(public Work: string ){
-
-  }
 }

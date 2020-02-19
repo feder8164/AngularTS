@@ -1,4 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { TaskService } from '../services/task.service';
+
+
 
 @Component({
   selector: "app-task-list",
@@ -6,23 +9,26 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./task-list.component.css"]
 })
 export class TaskListComponent implements OnInit {
-  @Input()
-  tasksList = [];
 
-  @Output()
-  eventRemoveTask = new EventEmitter<string>();
+  tasksList = []; // musi byc ta tablica poniewaz, z niej cos wyswietlam
 
-  @Output()
-  eventTaskDone = new EventEmitter<string>();
+  constructor(private tasksService: TaskService) { // musimy zainicjalizowac liste zadan
+      this.tasksService.getTasksListObs().subscribe(tasks => { // wysyla observable ktorego mozemy subskrybowac
+          this.tasksList = tasks; // przypisujemy to co do nas przyszlo
+      } );
+  }
+ 
+
+  
 
   removeTask(task) {
-    this.eventRemoveTask.emit(task);
+   this.tasksService.removeTask(task);
   }
   doneTask(task){
-    this.eventTaskDone.emit(task);
+    this.tasksService.doneTask(task);
   }
 
-  constructor() {}
+  
 
   ngOnInit() {}
 }

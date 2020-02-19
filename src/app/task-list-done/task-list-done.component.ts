@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { TaskService } from  '../services/task.service';
+
 
 @Component({
   selector: 'app-task-list-done',
@@ -7,20 +9,23 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TaskListDoneComponent implements OnInit {
 
-  @Input()
   taskListdone = [];
 
-  @Output()
-  eventRemoveTaskDone = new EventEmitter<string>();
-  
+  constructor(private tasksService: TaskService) { 
+
+    this.tasksService.getTasksListDoneObs().subscribe(tasks => {
+      this.taskListdone = tasks;
+    });
+  }
 
   removeTaskdone(task){
+    this.tasksService.removeTaskdone(task);
     console.log(task)
-    this.eventRemoveTaskDone.emit(task);
+    
   }
 
 
-  constructor() { }
+  
 
   ngOnInit() {
   }

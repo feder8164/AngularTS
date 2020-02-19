@@ -1,10 +1,5 @@
+<app-add></app-add>
 
+<app-task-list> </app-task-list>
 
-<app-add (eventTask) = "selectedTask($event)"></app-add>
-
-<app-task-list [tasksList] = "taskList" 
-(eventRemoveTask) = "removeTask($event)" 
-(eventTaskDone) = "doneTask($event)">
-</app-task-list>
-
-<app-task-list-done [taskListdone] = "taskListdone" (eventRemoveTaskDone) = "removeTaskdone($event)"></app-task-list-done>
+<app-task-list-done></app-task-list-done>
