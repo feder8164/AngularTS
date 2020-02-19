@@ -25,6 +25,7 @@ export class TaskListComponent implements OnInit {
    this.tasksService.removeTask(task);
   }
   doneTask(task){
+    task.end = new Date(); // data ukonczenia
     this.tasksService.doneTask(task);
   }
 

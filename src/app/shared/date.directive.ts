@@ -1,21 +1,24 @@
-import { Directive, HostListener } from '@angular/core';
+import { Directive, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appDate]'
 })
 export class DateDirective {
 
+  @Input()
+  private date: Date; 
+
   constructor() { }
 
-  @HostListener('mouseenter') // bedzie dziala jak gdzie podbięta jest dyrektywa, mouseenet inicializuje ten HostListener
+  @HostListener('mouseenter')
   mouseenter(eventDate: Event){
-    {{}}
-    console.log('mouseenter') // reakcja na najechanie
+    
+    console.log(this.date)
   }
 
-  @HostListener('mouseleave') // reakcja po odjechaniu
+  @HostListener('mouseleave')
   mouseleave(eventDate: Event){
-    console.log('mouseleave')
+    console.log(this.date)
   }
 
 }
