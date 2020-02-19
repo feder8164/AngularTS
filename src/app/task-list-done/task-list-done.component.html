@@ -1,7 +1,7 @@
 <ng-container *ngIf = "taskListdone.length > 0">
   Zadania zrobione : {{taskListdone.length}}
 <ul>
-  <li appChecked *ngFor = "let task of taskListdone">
+  <li  *ngFor = "let task of taskListdone" appChecked>
       {{task.name}}
       <button (click) = "removeTaskdone(task)">Usun</button>
   </li>

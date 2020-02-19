@@ -1,10 +1,16 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef,Renderer2, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appChecked]'
 })
-export class CheckedDirective {
+export class CheckedDirective implements OnInit {
 
-  constructor() { }
+  constructor(private el: ElementRef, private renderer: Renderer2 ) { }
+
+  ngOnInit(): void{
+    let li = this.el.nativeElement; // utrzymuje ten element w li
+    this.renderer.setStyle(li, 'list-style-image', 'url(https://img.icons8.com/cotton/2x/checkmark.png'); // jaki styl chcemy zmienić, nadpisać
+    this.renderer.setStyle(li, 'background', '');
+  }
 
 }
