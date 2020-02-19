@@ -9,10 +9,11 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { TaskListDoneComponent } from './task-list-done/task-list-done.component';
 import { TaskService } from './services/task.service';
 import { CheckedDirective } from './shared/checked.directive';
+import { DateDirective } from './shared/date.directive';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, AddComponent, TaskListComponent,TaskListDoneComponent, CheckedDirective],
+  declarations: [ AppComponent, HelloComponent, AddComponent, TaskListComponent,TaskListDoneComponent, CheckedDirective, DateDirective],
   bootstrap:    [ AppComponent ],
   providers: [TaskService]
 })
