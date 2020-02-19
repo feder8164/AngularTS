@@ -12,12 +12,14 @@ export class AppComponent implements OnInit  {
   allClicks: number = 0;
 
   constructor(private clickService: ClickService){
+    
 
   }
   
   ngOnInit(): void{ // informacja ze ta zmienna sie zmieniła i pobierac informacje z serwisu
     this.clickService.getSum().subscribe(clicks => { // informacje sa na biezaco aktualizowane
       this.allClicks = clicks;
+      
     }) 
   }
 }
