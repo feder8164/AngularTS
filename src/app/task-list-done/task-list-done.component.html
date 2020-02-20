@@ -2,7 +2,7 @@
   Zadania zrobione : {{taskListdone.length}}
 <ul>
   <li appChecked appDate [date] = "task.end" *ngFor = "let task of taskListdone" >
-      {{task.name}}
+      {{task.name | transform: ' -  super'}}
       <button (click) = "removeTaskdone(task)">Usun</button>
   </li>
 </ul>
