@@ -11,10 +11,11 @@ import { TaskService } from './services/task.service';
 import { CheckedDirective } from './shared/checked.directive';
 import { DateDirective } from './shared/date.directive';
 import { TransformPipe } from './shared/transform.pipe';
+import { SortNamePipe } from './shared/sort-name.pipe';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, AddComponent, TaskListComponent,TaskListDoneComponent, CheckedDirective, DateDirective, TransformPipe],
+  declarations: [ AppComponent, HelloComponent, AddComponent, TaskListComponent,TaskListDoneComponent, CheckedDirective, DateDirective, TransformPipe, SortNamePipe],
   bootstrap:    [ AppComponent ],
   providers: [TaskService]
 })
