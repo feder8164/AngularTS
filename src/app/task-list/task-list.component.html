@@ -1,6 +1,6 @@
 <ng-container *ngIf="tasksList.length > 0; else noTask">
 	<div *ngFor="let task of tasksList">
-		{{task.name}}
+		{{task.name | transform}}
 		<button (click) = "removeTask(task)">Usun</button>
 		<button (click) = "doneTask(task)">Zrobione</button>
 	</div>
