@@ -14,7 +14,7 @@ export class TaskListDoneComponent implements OnInit {
   constructor(private tasksService: TaskService) { 
 
     this.tasksService.getTasksListDoneObs().subscribe(tasks => {
-      this.taskListdone = tasks;
+      this.taskListdone = tasks.slice();
     });
   }
 

@@ -10,11 +10,11 @@ import { TaskService } from '../services/task.service';
 })
 export class TaskListComponent implements OnInit {
 
-  tasksList = []; // musi byc ta tablica poniewaz, z niej cos wyswietlam
+  tasksList = []; 
 
-  constructor(private tasksService: TaskService) { // musimy zainicjalizowac liste zadan
-      this.tasksService.getTasksListObs().subscribe(tasks => { // wysyla observable ktorego mozemy subskrybowac
-          this.tasksList = tasks; // przypisujemy to co do nas przyszlo
+  constructor(private tasksService: TaskService) { 
+      this.tasksService.getTasksListObs().subscribe(tasks => { 
+          this.tasksList = tasks.slice(); // przy pobieraniu listy, zwroci nowa ta sama liste ale z nowa referenca i angular wykryje cos
       } );
   }
  
@@ -25,7 +25,7 @@ export class TaskListComponent implements OnInit {
    this.tasksService.removeTask(task);
   }
   doneTask(task){
-    task.end = new Date(); // data ukonczenia
+    task.end = new Date(); 
     this.tasksService.doneTask(task);
   }
 

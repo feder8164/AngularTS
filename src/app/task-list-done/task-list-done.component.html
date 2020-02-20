@@ -1,7 +1,7 @@
 <ng-container *ngIf = "taskListdone.length > 0">
   Zadania zrobione : {{taskListdone.length}}
 <ul>
-  <li appChecked appDate [date] = "task.end" *ngFor = "let task of taskListdone" >
+  <li appChecked appDate [date] = "task.end" *ngFor = "let task of taskListdone | sortName" >
       {{task.name | transform: ' -  super'}}
       <button (click) = "removeTaskdone(task)">Usun</button>
   </li>
